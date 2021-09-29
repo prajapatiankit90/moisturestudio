@@ -1,0 +1,214 @@
+/*********************  Header  *******************/
+header {
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: all 0.5s;
+  z-index: 999;
+}
+
+.nav-link {
+  text-transform: capitalize;
+  margin-left: 50px;
+  font-size: 16px;
+  color: #0e0920;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #7474f5;
+}
+
+.navbar {
+  padding: 38px 0;
+  height: 120px;
+  transition: all 0.5s;
+}
+
+/*********************  Header Close  *******************/
+
+/*********************  Header-Fixed  *******************/
+header.fixed {
+  background: #fff;
+  box-shadow: 0 2px 30px hsl(0 0% 0% / 8%);
+}
+
+header.fixed .navbar {
+  padding: 0;
+  transition: all 0.5s;
+  height: 80px;
+}
+
+/*********************  Header-Fixed Close  *******************/
+
+/* Navbar css */
+
+a.navbar-brand {
+  color: var(--black);
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 2rem;
+  font-family: "zeroesone";
+  text-transform: uppercase;
+}
+nav.fixed-top {
+  position: fixed;
+  width: 100%;
+  max-width: 100%;
+  left: 0;
+  top: 0;
+  height: 80px;
+  background-color: initial !important;
+  z-index: 999;
+}
+.fixed-top.is-sticky {
+  background-color: #fff !important;
+  box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.1);
+  -webkit-animation: fadeInDown 0.5s ease-in-out 0s 1 normal none running;
+  animation: fadeInDown 0.5s ease-in-out 0s 1 normal none running;
+}
+a.navbar-brand span {
+  color: #6112c9;
+}
+nav a,
+.navbar-nav .nav-link {
+  cursor: pointer;
+  color: var(--black);
+  transition: 0.5s;
+}
+.is-sticky .navbar-nav .nav-link,
+.is-sticky a.navbar-brand {
+  color: var(--black);
+  transition: 0.5s;
+}
+.navbar-toggler {
+  z-index: 9999;
+}
+nav a:hover,
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #6112c9;
+}
+nav {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+}
+.navbar-expand-md .navbar-nav .nav-link {
+  padding-right: 0.8rem;
+  padding-left: 0.8rem;
+}
+@keyframes fadeInDown {
+  0% {
+    -webkit-transform: translate3d(0, -100%, 0);
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .navbar-toggler .navbar-toggler-icon {
+    background-image: url(../images/menu.svg);
+  }
+
+  nav.navbar .menu-ul {
+    background-color: var(--white);
+    padding: 60px 0 15px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: block !important;
+    width: 60% !important;
+    text-align: center;
+    bottom: 0;
+    -webkit-transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    -ms-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+    -webkit-transform: translateX(110%);
+    -moz-transform: translateX(110%);
+    -ms-transform: translateX(110%);
+    -o-transform: translateX(110%);
+    transform: translateX(110%);
+    height: auto !important;
+    overflow: auto;
+    border-radius: 0;
+    border-left: 1px solid #6112c9;
+  }
+  nav.navbar .menu-ul.show {
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+  nav.navbar .menu-ul:after {
+    width: 50px;
+    height: 50px;
+    background: #6112c9;
+    position: absolute;
+    content: "";
+    top: -10px;
+    left: -10px;
+    border-radius: 100%;
+  }
+  nav.navbar .menu-ul::before {
+    width: 50px;
+    height: 50px;
+    background: #6112c9;
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    right: -20px;
+    border-radius: 100%;
+  }
+  .navbar-toggler span {
+    position: relative;
+    width: 25px;
+    height: 2px;
+    background-color: #6112c9;
+    display: inline-block;
+    vertical-align: middle;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .navbar-toggler span::before,
+  .navbar-toggler span::after {
+    position: absolute;
+    content: "";
+    width: 17px;
+    height: 2px;
+    background-color: #6112c9;
+    right: 0;
+    transition: all 0.5s;
+    animation: openCloseByeSpan 300ms linear forwards;
+  }
+  .navbar-toggler span::before {
+    top: -7px;
+  }
+  .navbar-toggler span::after {
+    top: 7px;
+  }
+  /* 
+    .navbar-toggler span::before, .navbar-toggler span::after {
+        left: 0;
+        right: 0;
+        margin: auto;
+        transform: rotate(45deg);
+        top: -1px;
+        background: #fff;
+    }
+    .navbar-togglerspan::after {
+        transform: rotate(-45deg);
+    }
+    .navbar-toggler span{
+        height: 0;
+    } */
+}

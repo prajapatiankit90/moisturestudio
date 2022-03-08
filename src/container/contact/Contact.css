@@ -1,0 +1,17 @@
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+  background-color: #7474f5 !important;
+  border-color: #7474f5;
+}
+/* 
+select {
+  width: 190px !important;
+}
+.dropdown {
+  padding-left: 471px;
+} */
+
+.errors {
+  color: red;
+}
